@@ -3,38 +3,27 @@ package modell;
 import java.util.List;
 
 public class Group {
-    private List <Student> studentGroup;
     private Teacher teacher;
-    
-    
-    public Group(List<Student> studentGroup, Teacher teacher) {
-        this.studentGroup = studentGroup;
-        this.teacher = teacher;
-    }
-
-
-    public List<Student> getStudentGroup() {
-        return studentGroup;
-    }
-
-
-    public void setStudentGroup(List<Student> studentGroup) {
-        this.studentGroup = studentGroup;
-    }
-
+    private List<Student> studentList;
 
     public Teacher getTeacher() {
         return teacher;
     }
 
-
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
+    public List<Student> getStudentList() {
+        return studentList;
     }
-    
-  
-   
-   
 
+    @Override
+    public String toString() {
+        return "Group{\n" +
+                "teacher:\n" + teacher + "\n" +
+                "studentList:\n" + studentList +
+                "}\n";
+    }
 
+    public Group(Teacher teacher, List<Student> studentList) {
+        this.teacher = teacher;
+        this.studentList = studentList;
+    }
 }

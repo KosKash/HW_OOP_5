@@ -1,23 +1,23 @@
 package modell;
 
-public class Teacher extends User{
-    private int teacherId;
-
-    public Teacher(String firstName, String secondName, String lastName, int teacherId) {
-        super(firstName, secondName, lastName);
-        this.teacherId = teacherId;
-    }
-
-    public int getTeacherId() {
-        return teacherId;
-    }
+public class Teacher extends User {
+    private Integer teacherId;
 
     @Override
     public String toString() {
-        return "Teacher [teacherId=" + teacherId + " " + super.toString() + "]";
+        return "Teacher {" +
+                "teacherId= " + teacherId +
+                super.toString()+
+                '}';
     }
 
-        
+    public Integer getTeacherId() {
+        return teacherId;
+    }
 
-    
+    public Teacher(String firstName, String secondName, String lastName,Integer id) {
+        super(firstName, secondName, lastName);
+        this.teacherId = id;
+    }
+
 }

@@ -1,22 +1,11 @@
 package view;
 
-import java.util.List;
-
 import modell.Student;
 
-public class StudentView implements IUsersView<Student> {
+public class StudentView
+{
 
-    @Override
-    public void printOnConsole(Student user) {
-        System.out.println(user);
+    public void printToConsole(Student student) {
+        System.out.println(student);
     }
-
-    @Override
-    public void printOnConsoleArr(List<Student> users) {
-        for (Student student : users) {
-            System.out.println(student);
-        }
-
-    }
-
 }
